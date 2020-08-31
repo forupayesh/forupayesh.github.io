@@ -36,9 +36,9 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[36.23345223089071,59.15101559970908],[36.64204810211948,59.79201930127579]]);
+        }).fitBounds([[36.234109111461244,59.18882260237569],[36.64289325075728,59.830006903502415]]);
         var hash = new L.Hash(map);
-        map.attributionControl.setPrefix('<a href="https://www.forupayesh.ir" target="_blank">Forupayesh</a> &middot; <a href="http://www.grac.ir" title="شتابدهنده کسب و کارهای فضاپایه گرانش">Geranesh</a>;');
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         var measureControl = new L.Control.Measure({
             position: 'topleft',
