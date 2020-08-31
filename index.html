@@ -3,7 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+-->
+        <!-- Mobile meta tags to go in head-->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta http-equiv="cleartype" content="on">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css">
@@ -14,6 +22,10 @@
             height: 100%;
             padding: 0;
             margin: 0;
+        }.leaflet-popup-content {
+            min-width: 200px;
+            min-height: 100px;
+            overflow-y: scroll;
         }
         </style>
         <title></title>
@@ -109,7 +121,7 @@
         bounds_group.addLayer(layer_Gaz_Line_3);
         map.addLayer(layer_Gaz_Line_3);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Gaz_Line_3.png" /> Gaz_Line': layer_Gaz_Line_3,"gaz_2010": layer_gaz_2010_2,"gaz_2005": layer_gaz_2005_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Gaz_Line_3.png" />  خط لوله گاز': layer_Gaz_Line_3,"فرونشست خط لوله گاز سال 2010": layer_gaz_2010_2,"فرونشست خط لوله گاز سال 2005": layer_gaz_2005_1,"نقشه پایه": layer_OSMStandard_0,}).addTo(map);
         setBounds();
         L.ImageOverlay.include({
             getBounds: function () {
