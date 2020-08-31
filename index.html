@@ -30,21 +30,21 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/Gaz_Line_3.js"></script>
+        <script src="data/_3.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[36.08655032539345,58.784995113820905],[36.90326058939093,60.06757407365498]]);
+        }).fitBounds([[36.234109111461244,59.18882260237569],[36.64289325075728,59.830006903502415]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        map.createPane('pane_OSMStandard_0');
-        map.getPane('pane_OSMStandard_0').style.zIndex = 400;
-        var layer_OSMStandard_0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            pane: 'pane_OSMStandard_0',
+        map.createPane('pane__0');
+        map.getPane('pane__0').style.zIndex = 400;
+        var layer__0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane__0',
             opacity: 1.0,
             attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
             minZoom: 1,
@@ -52,27 +52,27 @@
             minNativeZoom: 0,
             maxNativeZoom: 19
         });
-        layer_OSMStandard_0;
-        map.addLayer(layer_OSMStandard_0);
-        map.createPane('pane_gaz_2005_1');
-        map.getPane('pane_gaz_2005_1').style.zIndex = 401;
-        var img_gaz_2005_1 = 'data/gaz_2005_1.png';
-        var img_bounds_gaz_2005_1 = [[36.255414725803554,58.94421815602903],[36.735702151687974,59.8973342738897]];
-        var layer_gaz_2005_1 = new L.imageOverlay(img_gaz_2005_1,
-                                              img_bounds_gaz_2005_1,
-                                              {pane: 'pane_gaz_2005_1'});
-        bounds_group.addLayer(layer_gaz_2005_1);
-        map.addLayer(layer_gaz_2005_1);
-        map.createPane('pane_gaz_2010_2');
-        map.getPane('pane_gaz_2010_2').style.zIndex = 402;
-        var img_gaz_2010_2 = 'data/gaz_2010_2.png';
-        var img_bounds_gaz_2010_2 = [[36.254066724476004,58.94330552214255],[36.73682752833649,59.898504730700594]];
-        var layer_gaz_2010_2 = new L.imageOverlay(img_gaz_2010_2,
-                                              img_bounds_gaz_2010_2,
-                                              {pane: 'pane_gaz_2010_2'});
-        bounds_group.addLayer(layer_gaz_2010_2);
-        map.addLayer(layer_gaz_2010_2);
-        function pop_Gaz_Line_3(feature, layer) {
+        layer__0;
+        map.addLayer(layer__0);
+        map.createPane('pane_2010_1');
+        map.getPane('pane_2010_1').style.zIndex = 401;
+        var img_2010_1 = 'data/2010_1.png';
+        var img_bounds_2010_1 = [[36.254066724476004,58.94330552214255],[36.73682752833649,59.898504730700594]];
+        var layer_2010_1 = new L.imageOverlay(img_2010_1,
+                                              img_bounds_2010_1,
+                                              {pane: 'pane_2010_1'});
+        bounds_group.addLayer(layer_2010_1);
+        map.addLayer(layer_2010_1);
+        map.createPane('pane_2005_2');
+        map.getPane('pane_2005_2').style.zIndex = 402;
+        var img_2005_2 = 'data/2005_2.png';
+        var img_bounds_2005_2 = [[36.255414725803554,58.94421815602903],[36.735702151687974,59.8973342738897]];
+        var layer_2005_2 = new L.imageOverlay(img_2005_2,
+                                              img_bounds_2005_2,
+                                              {pane: 'pane_2005_2'});
+        bounds_group.addLayer(layer_2005_2);
+        map.addLayer(layer_2005_2);
+        function pop__3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
@@ -81,35 +81,35 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Gaz_Line_3_0() {
+        function style__3_0() {
             return {
-                pane: 'pane_Gaz_Line_3',
+                pane: 'pane__3',
                 opacity: 1,
-                color: 'rgba(0,0,0,1.0)',
+                color: 'rgba(0,0,0,0.7)',
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
-                weight: 1.0,
+                weight: 2.0,
                 fillOpacity: 0,
                 interactive: true,
             }
         }
-        map.createPane('pane_Gaz_Line_3');
-        map.getPane('pane_Gaz_Line_3').style.zIndex = 403;
-        map.getPane('pane_Gaz_Line_3').style['mix-blend-mode'] = 'normal';
-        var layer_Gaz_Line_3 = new L.geoJson(json_Gaz_Line_3, {
+        map.createPane('pane__3');
+        map.getPane('pane__3').style.zIndex = 403;
+        map.getPane('pane__3').style['mix-blend-mode'] = 'normal';
+        var layer__3 = new L.geoJson(json__3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Gaz_Line_3',
-            layerName: 'layer_Gaz_Line_3',
-            pane: 'pane_Gaz_Line_3',
-            onEachFeature: pop_Gaz_Line_3,
-            style: style_Gaz_Line_3_0,
+            dataVar: 'json__3',
+            layerName: 'layer__3',
+            pane: 'pane__3',
+            onEachFeature: pop__3,
+            style: style__3_0,
         });
-        bounds_group.addLayer(layer_Gaz_Line_3);
-        map.addLayer(layer_Gaz_Line_3);
+        bounds_group.addLayer(layer__3);
+        map.addLayer(layer__3);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Gaz_Line_3.png" /> Gaz_Line': layer_Gaz_Line_3,"gaz_2010": layer_gaz_2010_2,"gaz_2005": layer_gaz_2005_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/_3.png" /> خط لوله گاز': layer__3,"فرونشست سال 2005": layer_2005_2,"فرونشست سال 2010": layer_2010_1,"نقشه پایه": layer__0,}).addTo(map);
         setBounds();
         L.ImageOverlay.include({
             getBounds: function () {
